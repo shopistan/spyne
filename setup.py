@@ -255,7 +255,7 @@ class RunTests(ExtendedTestCommand):
 ###############################
 
 setup(
-    name='spyne-shopdev',
+    name='spyne-custom',
     packages=find_packages(),
 
     version=VERSION,
