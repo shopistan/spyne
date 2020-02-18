@@ -1051,8 +1051,9 @@ class XmlDocument(SubXmlBase):
         if self.validator is self.SOFT_VALIDATION:
             for key, c in flat_type_info.items():
                 val = frequencies.get(key, 0)
+                val = int(val)
                 attr = self.get_cls_attrs(c)
-                if val < attr.min_occurs or val > attr.max_occurs:
+                if val < int(attr.min_occurs) or val > int(attr.max_occurs):
                     raise Fault('Client.ValidationError', '%r member does not '
                                          'respect frequency constraints.' % key)
 
