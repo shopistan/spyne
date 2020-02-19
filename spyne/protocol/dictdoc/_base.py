@@ -138,7 +138,7 @@ class DictDocument(ProtocolBase):
                 attrs = self.get_cls_attrs(v)
                 min_o, max_o = attrs.min_occurs, attrs.max_occurs
 
-            if val < min_o:
+            if val < int(min_o):
                 raise ValidationError("%r.%s" % (cls, k),
                              '%%s member must occur at least %d times.' % min_o)
 
