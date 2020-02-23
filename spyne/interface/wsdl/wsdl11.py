@@ -227,6 +227,7 @@ class Wsdl11(XmlSchema):
         wsdl_port.set('binding', '%s:%s' % (pref_tns, binding_name))
 
         addr = SubElement(wsdl_port, ns.get_binding_ns(self.interface.app.in_protocol.type)("address"))
+        print("url: " + self.url)
         self.url = self.url.replace("http://", "https://")
         addr.set('location', self.url)
 
