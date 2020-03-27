@@ -21,7 +21,7 @@
 class LogicError(Exception):
     pass
 
-__version__ = '2.13.18'
+__version__ = '2.13.19'
 
 from pytz import utc as LOCAL_TZ
 from decimal import Decimal as D
