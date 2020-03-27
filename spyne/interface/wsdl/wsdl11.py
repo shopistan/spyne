@@ -371,7 +371,7 @@ class Wsdl11(XmlSchema):
             operation.set('name', method.operation_name)
 
             soap_operation = SubElement(operation, input_binding_ns("operation"))
-            soap_operation.set('soapAction', pref_tns+ '/' +method.operation_name)
+            soap_operation.set('soapAction', self.interface.tns + '/' + method.operation_name)
             soap_operation.set('style', 'document')
 
             # get input
